@@ -9,6 +9,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from './components/home/home/home.component';
+import { RelevantproductsComponent } from './containers/relevantproduct/relevantproducts/relevantproducts.component';
 
 
 
@@ -17,7 +18,8 @@ import { HomeComponent } from './components/home/home/home.component';
   declarations: [
     AppComponent,
     SidenavComponent,
-    HomeComponent
+    HomeComponent,
+    RelevantproductsComponent
   ],
   imports: [
     BrowserModule,
