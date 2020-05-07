@@ -8,6 +8,7 @@ import { SidenavComponent } from './components/sidenav/sidenav/sidenav.component
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
+import { HomeComponent } from './components/home/home/home.component';
 
 
 
@@ -15,7 +16,8 @@ import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
-    SidenavComponent
+    SidenavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
