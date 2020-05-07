@@ -1,27 +1,26 @@
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side" >
-  <img  src="../../../../assets/img/hello.jpeg" routerLink="home">
-    <h6 routerLink="home">Colchones</h6>
+    <span><img  src="../../../../assets/img/hello.jpeg" routerLink="home">  <p routerLink="home">Colchones</p></span>
 
-    <button mat-raised-button routerLink routerLink="/productosdestacados">
+
+    <button mat-raised-button  routerLink="/productosdestacados">
       <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
       Productos destacados
     </button>
-    <button mat-raised-button>
+    <button mat-raised-button routerLink="colchones">
       <mat-icon aria-hidden="false" aria-label="Example home icon">airline_seat_flat_angled</mat-icon>
       Nuestros colchones
     </button>
-    <button mat-raised-button>
+    <button mat-raised-button routerLink="somiers">
       <mat-icon aria-hidden="false" aria-label="Example home icon">airline_seat_individual_suite</mat-icon>
       nuestros somieres
     </button>
 
 
 
-  <button mat-raised-button>
-    <mat-icon  aria-hidden="false" aria-label="Example home icon">person</mat-icon>
-
-    Login
+  <button mat-raised-button routerLink="login">
+  <mat-icon  aria-hidden="false" aria-label="Example home icon">person</mat-icon>
+  Login
   </button>
   </mat-drawer>
 

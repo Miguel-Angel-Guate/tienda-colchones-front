@@ -10,6 +10,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from './components/home/home/home.component';
 import { RelevantproductsComponent } from './containers/relevantproduct/relevantproducts/relevantproducts.component';
+import { MattressComponent } from './containers/ourmattress/mattress/mattress.component';
+import { BedframeComponent } from './containers/ourbedframe/bedframe/bedframe.component';
+import { LoggedComponent } from './containers/log/logged/logged.component';
 
 
 
@@ -19,7 +22,10 @@ import { RelevantproductsComponent } from './containers/relevantproduct/relevant
     AppComponent,
     SidenavComponent,
     HomeComponent,
-    RelevantproductsComponent
+    RelevantproductsComponent,
+    MattressComponent,
+    BedframeComponent,
+    LoggedComponent
   ],
   imports: [
     BrowserModule,
