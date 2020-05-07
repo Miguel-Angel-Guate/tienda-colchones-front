@@ -1,6 +1,9 @@
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side" >
-    <h5>Ginzo colchones</h5>
+
+  <img  src="../../../../assets/img/hello.jpeg">
+
+    <h6>Colchones</h6>
 
     <button mat-raised-button>
       <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
@@ -27,16 +30,20 @@
   </mat-menu>
 
   <button mat-raised-button>
+    <mat-icon  aria-hidden="false" aria-label="Example home icon">person</mat-icon>
+
     Login
   </button>
   </mat-drawer>
 
 
-
   <div class="example-sidenav-content">
+    <p>Revisa nuestras  </p>
+
     <button type="button" color="primary" mat-button (click)="drawer.toggle()">
       Ofertas
     </button>
   </div>
 
 </mat-drawer-container>
+
