@@ -17,6 +17,8 @@ import { LoggedComponent } from './containers/log/logged/logged.component';
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +36,7 @@ import { LoggedComponent } from './containers/log/logged/logged.component';
     MatSidenavModule,
     MatMenuModule,
     MatIconModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
