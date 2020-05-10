@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { OurmattressService } from'src/app/services/ourmattress.service';
 import { from } from 'rxjs';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-mattress',
@@ -8,13 +8,13 @@ import { from } from 'rxjs';
   styleUrls: ['./mattress.component.less']
 })
 export class MattressComponent implements OnInit {
-
-  constructor(public ourmattressService: OurmattressService) { }
+  public mattresses:object[];
+  constructor(public productoService:ProductService) { }
 
   ngOnInit():void {
-    this.ourmattressService.getAll()
+    this.productoService.getMattresses()
     .subscribe(
-      res => this.ourmattressService.setOurmattress(res),
+      (mattresses:object[]) => this.mattresses=mattresses,
       error => console.log(error)
     )
   }

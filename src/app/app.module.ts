@@ -22,9 +22,11 @@ import { HomeComponent } from './components/home/home/home.component';
 import { RelevantproductsComponent } from './containers/relevantproduct/relevantproducts/relevantproducts.component';
 import { MattressComponent } from './containers/ourmattress/mattress/mattress.component';
 import { BedframeComponent } from './containers/ourbedframe/bedframe/bedframe.component';
-import { LoggedComponent } from './containers/log/logged/logged.component';
-import { RegisterComponent } from './containers/toregister/register/register.component';
+import { LoggedComponent } from './containers/user/login/logged.component';
+import { RegisterComponent } from './containers/user/register/register.component';
 import { AddproductsComponent } from './containers/toadd/addproducts/addproducts.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -47,6 +49,8 @@ import { AddproductsComponent } from './containers/toadd/addproducts/addproducts
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatSidenavModule,
     MatMenuModule,
