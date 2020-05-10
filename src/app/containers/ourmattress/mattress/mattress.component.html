@@ -1,1 +1,9 @@
-<p>mattress works!</p>
+<div class="ourmattress" *ngIf="ourmattressService.ourmattress">
+  <h3>Nuestra varidad de colchones</h3>
+  <mat-list class="ourmattres" *ngFor="let ourmattres of ourmattressService.ourmattress">
+    <span>{{ourmattres.name}}</span>
+    <span>{{ourmattres.kind}}</span>
+
+  </mat-list>
+
+</div>

@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./addproducts.component.less']
 })
 export class AddproductsComponent implements OnInit {
+  onFileSelected(event){
+    console.log(event)
+  }
 
   constructor() { }
 

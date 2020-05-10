@@ -15,6 +15,8 @@ import {
 import {LayoutModule} from '@angular/cdk/layout';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatListModule} from '@angular/material/list';
+
 
 import { HomeComponent } from './components/home/home/home.component';
 import { RelevantproductsComponent } from './containers/relevantproduct/relevantproducts/relevantproducts.component';
@@ -57,7 +59,8 @@ import { AddproductsComponent } from './containers/toadd/addproducts/addproducts
     MatToolbarModule,
     MatProgressSpinnerModule,
     MatFormFieldModule,
-    LayoutModule
+    LayoutModule,
+    MatListModule
 
   ],
   providers: [],
