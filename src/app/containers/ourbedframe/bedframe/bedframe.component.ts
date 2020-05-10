@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-bedframe',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BedframeComponent implements OnInit {
 
-  constructor() { }
+  public beds:object[];
+  constructor(public productoService:ProductService) { }
 
   ngOnInit() {
+    this.productoService.getBeds()
+    .subscribe(
+      (beds:object[]) => this.beds=beds,
+      error => console.log(error)
+    )
   }
 
 }

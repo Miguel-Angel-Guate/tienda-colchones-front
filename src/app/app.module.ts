@@ -15,13 +15,18 @@ import {
 import {LayoutModule} from '@angular/cdk/layout';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatListModule} from '@angular/material/list';
+
 
 import { HomeComponent } from './components/home/home/home.component';
 import { RelevantproductsComponent } from './containers/relevantproduct/relevantproducts/relevantproducts.component';
 import { MattressComponent } from './containers/ourmattress/mattress/mattress.component';
 import { BedframeComponent } from './containers/ourbedframe/bedframe/bedframe.component';
-import { LoggedComponent } from './containers/log/logged/logged.component';
-import { RegisterComponent } from './containers/toregister/register/register.component';
+import { LoggedComponent } from './containers/user/login/logged.component';
+import { RegisterComponent } from './containers/user/register/register.component';
+import { AddproductsComponent } from './containers/toadd/addproducts/addproducts.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -38,11 +43,14 @@ import { RegisterComponent } from './containers/toregister/register/register.com
     MattressComponent,
     BedframeComponent,
     LoggedComponent,
-    RegisterComponent
+    RegisterComponent,
+    AddproductsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatSidenavModule,
     MatMenuModule,
@@ -55,7 +63,8 @@ import { RegisterComponent } from './containers/toregister/register/register.com
     MatToolbarModule,
     MatProgressSpinnerModule,
     MatFormFieldModule,
-    LayoutModule
+    LayoutModule,
+    MatListModule
 
   ],
   providers: [],

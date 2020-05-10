@@ -19,10 +19,15 @@
 
 
 
-  <button mat-raised-button routerLink="login">
+  <button mat-raised-button routerLink="login" *ngIf="!userService.user">
   <mat-icon  aria-hidden="false" aria-label="Example home icon">person</mat-icon>
   Login
   </button>
+
+  <button mat-raised-button routerLink="agregarProductos" *ngIf="userService.user && userService.user['role']==='admin'">
+    <mat-icon  aria-hidden="false" aria-label="Example home icon">person</mat-icon>
+    Agregar productos
+    </button>
   </mat-drawer>
 
 

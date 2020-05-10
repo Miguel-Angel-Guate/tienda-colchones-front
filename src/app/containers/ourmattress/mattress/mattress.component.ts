@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { from } from 'rxjs';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-mattress',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mattress.component.less']
 })
 export class MattressComponent implements OnInit {
+  public mattresses:object[];
+  constructor(public productoService:ProductService) { }
 
-  constructor() { }
-
-  ngOnInit() {
+  ngOnInit():void {
+    this.productoService.getMattresses()
+    .subscribe(
+      (mattresses:object[]) => this.mattresses=mattresses,
+      error => console.log(error)
+    )
   }
 
 }

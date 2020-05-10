@@ -5,26 +5,26 @@
     <mat-card-title>Login</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <form class="example-form">
+    <form class="example-form" #loginForm="ngForm" (submit)="login(loginForm)" >
       <table class="example-full-width" cellspacing="0">
         <tr>
           <td>
             <mat-form-field class="example-full-width">
-            <input matInput placeholder="email"  name="username" required>
+            <input matInput placeholder="email"  name="username" required ngModel>
             </mat-form-field>
           </td>
         </tr>
         <tr>
         <td><mat-form-field class="example-full-width">
-          <input matInput placeholder="Password" type="password" name="password" required>
+          <input matInput placeholder="Password" type="password" name="password" required ngModel>
         </mat-form-field></td>
       </tr></table>
+      <button mat-raised-button color="primary" type="submit">Login</button> <br>
     </form>
     <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button (click)="login()" color="primary">Login</button> <br>
-    <span>No estas registrado? <button routerLink="register">Registrate</button> </span>
+    <span>No estas registrado? <button routerLink="/register">Registrate</button> </span>
 
   </mat-card-actions>
 </mat-card>
