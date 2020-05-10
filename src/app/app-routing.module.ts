@@ -11,6 +11,7 @@ import { MattressComponent } from './containers/ourmattress/mattress/mattress.co
 import { BedframeComponent } from './containers/ourbedframe/bedframe/bedframe.component';
 import { LoggedComponent } from './containers/log/logged/logged.component';
 import { RegisterComponent } from './containers/toregister/register/register.component';
+import { AddproductsComponent } from './containers/toadd/addproducts/addproducts.component';
 
 
 
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path:'colchones', component:MattressComponent},
   {path: 'somiers', component:BedframeComponent},
   {path: 'login', component:LoggedComponent},
-  {path: 'login/register', component:RegisterComponent}
+  {path: 'login/register', component:RegisterComponent},
+  {path: 'agregarProductos', component:AddproductsComponent}
 ];
 
 @NgModule({
