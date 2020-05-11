@@ -1,0 +1,9 @@
+<div class="beds" *ngIf="beds">
+  <h3>Nuestra varidad de somieres</h3>
+  <mat-list class="bed" *ngFor="let bed of beds" [routerLink]="['/somieres',bed['._id']]">
+    <span>{{bed['name']}}</span>
+    <!-- <span>{{bed['kind']}}</span> -->
+    <img class="hiImg" src="{{bed['img']}}" alt="imagen del colchón">
+  </mat-list>
+
+</div>

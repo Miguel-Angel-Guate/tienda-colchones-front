@@ -1,0 +1,43 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side" >
+    <span>      <mat-icon aria-hidden="false" aria-label="Example home icon" routerLink="home" >home</mat-icon>
+      <img  src="../../../../assets/img/hello.jpeg" routerLink="home"></span>
+      <h4 routerLink="home">Colchones</h4>
+
+    <button mat-raised-button  routerLink="/productosdestacados">
+      <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+      Productos destacados
+    </button>
+    <button mat-raised-button routerLink="colchones">
+      <mat-icon aria-hidden="false" aria-label="Example home icon">airline_seat_flat_angled</mat-icon>
+      Nuestros colchones
+    </button>
+    <button mat-raised-button routerLink="somieres">
+      <mat-icon aria-hidden="false" aria-label="Example home icon">airline_seat_individual_suite</mat-icon>
+      nuestros somieres
+    </button>
+
+
+
+  <button mat-raised-button routerLink="login" *ngIf="!userService.user">
+  <mat-icon  aria-hidden="false" aria-label="Example home icon">person</mat-icon>
+  Login
+  </button>
+
+  <button mat-raised-button routerLink="agregarProductos" *ngIf="userService.user && userService.user['role']==='admin'">
+    <mat-icon  aria-hidden="false" aria-label="Example home icon">person</mat-icon>
+    Agregar productos
+    </button>
+  </mat-drawer>
+
+
+  <div class="example-sidenav-content">
+    <p>Revisa nuestras  </p>
+
+    <button type="button" color="primary" mat-button (click)="drawer.toggle()">
+      Ofertas
+    </button>
+  </div>
+
+</mat-drawer-container>
+
