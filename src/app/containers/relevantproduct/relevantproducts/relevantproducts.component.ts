@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-relevantproducts',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./relevantproducts.component.less']
 })
 export class RelevantproductsComponent implements OnInit {
+  public relevants:object[];
 
-  constructor() { }
+  constructor(public productoService:ProductService) { }
 
-  ngOnInit() {
+  ngOnInit():void {
+    this.productoService.getRelevants()
+    .subscribe(
+      (relevants:object[]) => this.relevants=relevants,
+      error => console.log(error)
+    )
   }
 
 }

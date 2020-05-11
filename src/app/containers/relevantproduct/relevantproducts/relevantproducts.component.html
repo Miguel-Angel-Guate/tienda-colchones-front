@@ -1,1 +1,10 @@
-<h5>Lo más solicitado por nuestros clientes</h5>
+<div class="relevants" *ngIf="relevants">
+  <h3>Los mas relevantes</h3>
+  <mat-list class="relevant" *ngFor="let relevant of relevants" [routerLink]="['/relevants',relevant['._id']]">
+    <p>{{relevants['true']}}</p>
+    <!-- <span>{{mattress['kind']}}</span> -->
+    <img class="hiImg" src="{{relevants['img']}}" alt="imagen del colchón">
+
+  </mat-list>
+
+</div>

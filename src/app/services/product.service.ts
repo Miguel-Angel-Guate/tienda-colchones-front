@@ -13,5 +13,9 @@ export class ProductService {
   }
   getBeds():Observable<any>{
     return this.httpClient.get<object[]>(environment.API_URL+'/products/somieres')
+
+  }
+  getRelevants():Observable<any>{
+    return this.httpClient.get<object[]>(environment.API_URL+'/products/relevants')
   }
 }
