@@ -1,8 +1,9 @@
-<div class="ourmattress" *ngIf="mattresses">
+<div class="mattress" *ngIf="mattresses">
   <h3>Nuestra varidad de colchones</h3>
-  <mat-list class="ourmattres" *ngFor="let mattress of mattresses"> [routerLink]="['/colchones',mattress['._id']]"
-    <span>{{mattress['name']}}</span>
+  <mat-list class="mattres" *ngFor="let mattress of mattresses"> [routerLink]="['/colchones',mattress['._id']]"
+    <p>{{mattress['name']}}</p>
     <span>{{mattress['kind']}}</span>
+    <img src="{{mattress['img']}}" alt="imagen del colchón">
 
   </mat-list>
 
